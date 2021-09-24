@@ -37,3 +37,15 @@ Resources:
       Tags:
       - Key: Name
         Value: IBMPUBSubnet
+
+  IBMPVTSubnet:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId:
+        Ref: IBMVPC
+      CidrBlock: 10.0.1.0/24
+      MapPublicIpOnLaunch: 'false'
+      AvailabilityZone: "us-east-1a"
+      Tags:
+      - Key: Name
+        Value: IBMPVTSubnet
